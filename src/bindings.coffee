@@ -18,7 +18,7 @@ CAMultiBind = (p1) -> (p2) ->
 		scope 	= p1
 		func 	= p2
 	() ->
-		for i,n in scope
+		for i,n of scope
 			func.call n
 
 ###
@@ -38,7 +38,7 @@ CABindGroup = (func) ->
 			funcs.push func
 			return pass
 		else
-			for i,n in funcs
+			for i,n of funcs
 				n()
 	pass func
 
